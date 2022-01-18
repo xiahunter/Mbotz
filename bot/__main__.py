@@ -43,7 +43,7 @@ def stats(update, context):
     sendMessage(stats, context.bot, update)
 
 
-def start(update, context):
+def run(update, context):
     buttons = button_build.ButtonMaker()
     buttons.buildbutton("DataBase", "https://t.me/HuntersDataBase")
     buttons.buildbutton("Index", "https://t.me/HuntersIndex")
