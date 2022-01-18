@@ -20,7 +20,7 @@ from bot.helper.telegram_helper import button_build
 from .modules import authorize, list, cancel_mirror, mirror_status, mirror, clone, watch, shell, eval, torrent_search, delete, speedtest, count, leech_settings
 
 
-def stats(update, context):
+def statz(update, context):
     currentTime = get_readable_time(time.time() - botStartTime)
     total, used, free = shutil.disk_usage('.')
     total = get_readable_file_size(total)
@@ -43,7 +43,7 @@ def stats(update, context):
     sendMessage(stats, context.bot, update)
 
 
-def start(update, context):
+def run(update, context):
     buttons = button_build.ButtonMaker()
     buttons.buildbutton("DataBase", "https://t.me/HuntersDataBase")
     buttons.buildbutton("Index", "https://t.me/HuntersIndex")
@@ -82,7 +82,7 @@ def ping(update, context):
     editMessage(f'{end_time - start_time} ms', reply)
 
 
-def log(update, context):
+def logz(update, context):
     sendLogFile(context.bot, update)
 
 
