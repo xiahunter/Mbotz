@@ -43,7 +43,7 @@ def stats(update, context):
     sendMessage(stats, context.bot, update)
 
 
-def run(update, context):
+def start(update, context):
     buttons = button_build.ButtonMaker()
     buttons.buildbutton("DataBase", "https://t.me/HuntersDataBase")
     buttons.buildbutton("Index", "https://t.me/HuntersIndex")
@@ -56,7 +56,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
         sendMarkup(start_string, context.bot, update, reply_markup)
     else:
         sendMarkup(
-            'Oops! not a Authorized user.🙂\nPlease Contact <b>@HunterKiller_GT</b>.',
+            'Torrent Module is Offline.',
             context.bot,
             update,
             reply_markup,
